@@ -388,12 +388,10 @@
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   }
 
-  /* Coverflow carousel slide */
   .coverflow-slide {
     flex: 0 0 400px;
     min-width: 0;
     position: relative;
-    margin: 0 -50px;
     will-change: transform, opacity;
   }
 

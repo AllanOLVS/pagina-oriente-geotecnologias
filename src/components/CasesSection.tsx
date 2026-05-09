@@ -59,8 +59,9 @@ export function CasesSection() {
       const rotateY = -diff * maxRotate;
       // Z depth
       const translateZ = -absDiff * (isSmall ? 25 : 45);
-      // X offset — push cards OUTWARD from center to reduce overlap
-      const translateX = diff * (isSmall ? 30 : 80);
+      // X offset — ajustado para compensar a remoção da margem negativa no CSS
+      // Valores negativos puxam os cards laterais para mais perto do centro
+      const translateX = diff * (isSmall ? -70 : -20);
       // Opacity
       const opacity = Math.max(0.15, 1 - absDiff * 0.28);
       // Z-index: center card on top

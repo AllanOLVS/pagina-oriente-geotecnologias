@@ -134,4 +134,24 @@ export const caseStudies: CaseStudy[] = [
     testimonial:
       "A atuação técnica foi elogiada pela qualidade das entregas, pelo compromisso com os prazos e pela segurança transmitida durante a elaboração das peças necessárias aos processos de aprovação.",
   },
+  {
+    id: "seazone",
+    company: "Seazone",
+    logoInitials: "SZ",
+    serviceTag: "Alvará e Aprovação",
+    shortDescription:
+      "Levantamentos técnicos para obtenção de alvará em Salvador/BA",
+    imagePlaceholder: "/images/cases/seazone.jpg",
+    location: "Salvador, BA",
+    context:
+      "Atuação junto à Seazone, empresa que atua na incorporação de imóveis, com demandas técnicas voltadas ao desenvolvimento de novos empreendimentos na cidade de Salvador/BA.",
+    problem:
+      "A cliente possuía demandas relacionadas à obtenção de alvará junto à Prefeitura de Salvador, exigindo levantamentos técnicos e elaboração de peças específicas para subsidiar os processos de aprovação dos novos empreendimentos.",
+    solution:
+      "Foram realizados levantamentos técnicos e elaboradas as peças técnicas necessárias para atender às exigências do processo de obtenção de alvará, conforme as demandas apresentadas pela cliente.",
+    result:
+      "As peças técnicas foram executadas com êxito, contribuindo para o andamento dos processos junto à Prefeitura de Salvador e gerando satisfação total da cliente com as entregas realizadas.",
+    testimonial:
+      "A atuação técnica foi elogiada pela qualidade das entregas, pelo compromisso com os prazos e pela segurança transmitida durante a elaboração das peças necessárias aos processos de aprovação.",
+  },
 ];
