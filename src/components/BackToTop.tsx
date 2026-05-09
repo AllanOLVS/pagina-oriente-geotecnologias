@@ -24,7 +24,7 @@ export function BackToTop() {
       style={{
         position: "fixed",
         bottom: 28,
-        right: 80,
+        left: 28,
         zIndex: 999,
         width: 40,
         height: 40,
