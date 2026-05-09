@@ -13,7 +13,7 @@ import { Counter } from "@/components/Counter";
 import { CasesSection } from "@/components/CasesSection";
 import { BackToTop } from "@/components/BackToTop";
 import heroBg from "@/assets/img-backgraund-hero.png";
-import aboutImg from "@/assets/about.jpg";
+import aboutImg from "@/assets/about.JPG";
 import heroLogo from "@/assets/logo-sFundo-nomeBranco.png";
 import fotoJanderson from "@/assets/foto-janderson.jpeg";
 import fotoMahatman from "@/assets/foto-mahatman.jpeg";
@@ -706,8 +706,7 @@ function Index() {
         <div className="container-x py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={"/" /* placeholder */} alt="" style={{ display: "none" }} />
-              <span className="font-display text-2xl">Oriente</span>
+              <img src={heroLogo} alt="Oriente Geotecnologias" className="h-16 object-contain" />
             </div>
             <p className="text-sm mb-5" style={{ color: "var(--text-secondary)" }}>
               Geotecnologia de precisão. Transformando dados em território desde 2021.
