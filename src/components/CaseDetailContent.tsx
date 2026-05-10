@@ -16,32 +16,43 @@ export function CaseDetailContent({ caseData, onClose, onCtaClick }: CaseDetailC
     <div className="case-modal-root">
       {/* ── HERO IMAGE AREA (unchanged) ── */}
       <div className="case-modal-hero">
-        <div className="absolute inset-0" style={{
-          background: "linear-gradient(135deg, #1b2838 0%, #0d1b2a 50%, #1a3a4a 100%)",
-        }} />
+        {caseData.imagePlaceholder && !caseData.imagePlaceholder.startsWith('/images') ? (
+          <img
+            src={caseData.imagePlaceholder}
+            alt={caseData.company}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0" style={{
+            background: "linear-gradient(135deg, #1b2838 0%, #0d1b2a 50%, #1a3a4a 100%)",
+          }} />
+        )}
         <div className="absolute inset-0 opacity-[0.04]" style={{
           backgroundImage: "radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }} />
-        <button onClick={onClose} aria-label="Fechar case" className="case-modal-close">
+        <button onClick={onClose} aria-label="Fechar case" className="case-modal-close z-20 relative">
           <X className="w-[18px] h-[18px]" />
         </button>
-        <div className="absolute inset-0 flex items-center justify-center" style={{ paddingBottom: "25%" }}>
-          <div className="flex items-center justify-center rounded-full" style={{
-            width: 110, height: 110,
-            border: "2px solid rgba(255,255,255,0.2)",
-            background: "rgba(255,255,255,0.04)",
-            backdropFilter: "blur(4px)",
-          }}>
-            <span className="font-bold text-2xl select-none" style={{
-              color: "var(--gold-primary)",
-              fontFamily: "'Playfair Display', serif",
-              letterSpacing: "0.05em",
+
+        {(!caseData.imagePlaceholder || caseData.imagePlaceholder.startsWith('/images')) && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ paddingBottom: "25%" }}>
+            <div className="flex items-center justify-center rounded-full" style={{
+              width: 110, height: 110,
+              border: "2px solid rgba(255,255,255,0.2)",
+              background: "rgba(255,255,255,0.04)",
+              backdropFilter: "blur(4px)",
             }}>
-              {caseData.logoInitials}
-            </span>
+              <span className="font-bold text-2xl select-none" style={{
+                color: "var(--gold-primary)",
+                fontFamily: "'Playfair Display', serif",
+                letterSpacing: "0.05em",
+              }}>
+                {caseData.logoInitials}
+              </span>
+            </div>
           </div>
-        </div>
+        )}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{
           height: "60%",
           background: "linear-gradient(to top, #0d1b2a 0%, rgba(13,27,42,0.8) 40%, transparent 100%)",
