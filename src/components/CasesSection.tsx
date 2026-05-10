@@ -101,6 +101,7 @@ export function CasesSection() {
     emblaApi.on("resize", applySlideStyles);
     emblaApi.on("reInit", apply);
     apply();
+    
     return () => {
       emblaApi.off("select", apply);
       emblaApi.off("scroll", applySlideStyles);
@@ -112,7 +113,8 @@ export function CasesSection() {
   // Click: center → open modal, side → scroll to center
   const handleCardClick = (index: number, caseData: CaseStudy) => {
     if (!emblaApi) return;
-    if (index === emblaApi.selectedScrollSnap()) {
+    
+    if (index === selectedIndex || index === emblaApi.selectedScrollSnap()) {
       setSelectedCase(caseData);
     } else {
       emblaApi.scrollTo(index);
@@ -190,6 +192,7 @@ export function CasesSection() {
                 <div
                   key={cs.id}
                   className="coverflow-slide"
+                  data-index={i}
                 >
                   {/* Inner wrapper — receives 3D transforms */}
                   <div data-coverflow-inner="" style={{ transformStyle: "preserve-3d" }}>

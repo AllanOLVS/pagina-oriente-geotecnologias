@@ -18,19 +18,28 @@ export function CaseCard({ caseData, onClick }: CaseCardProps) {
     >
       {/* Image Area */}
       <div className="relative overflow-hidden" style={{ aspectRatio: "16/10" }}>
-        <div
-          className="absolute inset-0 flex items-center justify-center"
-          style={{
-            background: "linear-gradient(135deg, #0C1A30 0%, #1A2F52 50%, #0C1A30 100%)",
-          }}
-        >
-          <span
-            className="text-sm font-medium"
-            style={{ color: "var(--text-muted)" }}
+        {caseData.imagePlaceholder && !caseData.imagePlaceholder.startsWith('/images') ? (
+          <img 
+            src={caseData.imagePlaceholder}
+            alt={caseData.shortDescription}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 pointer-events-none"
+            draggable={false}
+          />
+        ) : (
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+            style={{
+              background: "linear-gradient(135deg, #0C1A30 0%, #1A2F52 50%, #0C1A30 100%)",
+            }}
           >
-            [Foto do Projeto]
-          </span>
-        </div>
+            <span
+              className="text-sm font-medium"
+              style={{ color: "var(--text-muted)" }}
+            >
+              [Foto do Projeto]
+            </span>
+          </div>
+        )}
         {/* Gradient overlay from bottom */}
         <div
           className="absolute inset-0 pointer-events-none"

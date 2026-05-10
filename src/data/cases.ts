@@ -13,6 +13,12 @@ export interface CaseStudy {
   testimonial: string;
 }
 
+import carrossel1_2 from "../assets/carrossel1-2.png";
+import carrossel3 from "../assets/carrossel3.png";
+import carrossel4 from "../assets/carrossel4.png";
+import carrossel5 from "../assets/carrossel5.png";
+import carrossel6 from "../assets/carrossel6.png";
+
 export const caseStudies: CaseStudy[] = [
   {
     id: "senai-terraplenagem",
@@ -21,7 +27,7 @@ export const caseStudies: CaseStudy[] = [
     serviceTag: "Terraplenagem",
     shortDescription:
       "Projeto executivo de terraplenagem para o CIMATEC Park",
-    imagePlaceholder: "/images/cases/senai-terraplenagem.jpg",
+    imagePlaceholder: carrossel1_2,
     location: "Camaçari, BA",
     context:
       "Atuação no SENAI CIMATEC Park, com a necessidade de verificação técnica e compatibilização das informações do empreendimento para subsidiar a elaboração do projeto de terraplenagem.",
@@ -41,7 +47,7 @@ export const caseStudies: CaseStudy[] = [
     serviceTag: "Verificação Altimétrica",
     shortDescription:
       "Conferência altimétrica e posicional dos pilares do eletrocentro",
-    imagePlaceholder: "/images/cases/senai-eletrocentro.jpg",
+    imagePlaceholder: carrossel1_2,
     location: "Camaçari, BA",
     context:
       "Atuação técnica no SENAI CIMATEC Park, voltada à verificação das condições reais de execução de elementos estruturais vinculados ao eletrocentro, com foco na conferência altimétrica e posicional dos pilares executados.",
@@ -61,7 +67,7 @@ export const caseStudies: CaseStudy[] = [
     serviceTag: "Aerolevantamento",
     shortDescription:
       "Aerolevantamento técnico em área superior a 300 hectares na Praia do Forte",
-    imagePlaceholder: "/images/cases/iberostar.jpg",
+    imagePlaceholder: carrossel3,
     location: "Praia do Forte, BA",
     context:
       "Atuação no Iberostar Resort & Hotels — Praia do Forte, com a realização de um aerolevantamento técnico em toda a área do hotel, superior a 300 hectares, visando gerar informações espaciais mais completas para apoio à tomada de decisão.",
@@ -81,7 +87,7 @@ export const caseStudies: CaseStudy[] = [
     serviceTag: "Regularização Fundiária",
     shortDescription:
       "Apoio técnico na regularização de imóveis urbanos e rurais",
-    imagePlaceholder: "/images/cases/lp-advocacia.jpg",
+    imagePlaceholder: carrossel4,
     location: "Salvador, BA",
     context:
       "Atuação junto à LP Advocacia Imobiliária, escritório de advocacia especializado na regularização de imóveis urbanos e rurais, com demandas técnicas vinculadas à elaboração de peças e cadastros necessários aos processos de regularização.",
@@ -101,7 +107,7 @@ export const caseStudies: CaseStudy[] = [
     serviceTag: "Levantamento Topográfico",
     shortDescription:
       "Levantamento topográfico planialtimétrico para projetos geotécnicos",
-    imagePlaceholder: "/images/cases/geoax.jpg",
+    imagePlaceholder: carrossel5,
     location: "Bahia",
     context:
       "Atuação junto à Geoax Engenharia, com apoio técnico em diferentes demandas que exigiram levantamento topográfico planialtimétrico e aerolevantamentos.",
@@ -121,7 +127,7 @@ export const caseStudies: CaseStudy[] = [
     serviceTag: "Alvará e Aprovação",
     shortDescription:
       "Levantamentos técnicos para obtenção de alvará em Salvador/BA",
-    imagePlaceholder: "/images/cases/seazone.jpg",
+    imagePlaceholder: carrossel6,
     location: "Salvador, BA",
     context:
       "Atuação junto à Seazone, empresa que atua na incorporação de imóveis, com demandas técnicas voltadas ao desenvolvimento de novos empreendimentos na cidade de Salvador/BA.",
@@ -135,13 +141,13 @@ export const caseStudies: CaseStudy[] = [
       "A atuação técnica foi elogiada pela qualidade das entregas, pelo compromisso com os prazos e pela segurança transmitida durante a elaboração das peças necessárias aos processos de aprovação.",
   },
   {
-    id: "seazone",
+    id: "seazone-2",
     company: "Seazone",
     logoInitials: "SZ",
     serviceTag: "Alvará e Aprovação",
     shortDescription:
       "Levantamentos técnicos para obtenção de alvará em Salvador/BA",
-    imagePlaceholder: "/images/cases/seazone.jpg",
+    imagePlaceholder: carrossel6,
     location: "Salvador, BA",
     context:
       "Atuação junto à Seazone, empresa que atua na incorporação de imóveis, com demandas técnicas voltadas ao desenvolvimento de novos empreendimentos na cidade de Salvador/BA.",
